@@ -12,8 +12,6 @@
 const CONFIG = {
     // 請填入您的 GCP Client ID
     CLIENT_ID: '68186949243-va6lofj0pkt6hk53rtfd60p5k4ihvo34.apps.googleusercontent.com',
-    // 請填入您的 GCP API Key
-    API_KEY: 'AIzaSyDJik86e9sOLILbYPFmikZG-e2x5FdWowg',
     // 請填入您的 Google Sheet ID
     SPREADSHEET_ID: '12bHjJqnnVKDMbYb-VvEdFwxXA5G4amSwojehTsuvN5c',
 
@@ -194,7 +192,6 @@ function initGapiClient() {
         gapi.load('client', async () => {
             try {
                 await gapi.client.init({
-                    apiKey: CONFIG.API_KEY,
                     discoveryDocs: [CONFIG.DISCOVERY_DOC],
                 });
                 gapiInited = true;
